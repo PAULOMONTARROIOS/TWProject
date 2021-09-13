@@ -1,0 +1,175 @@
+
+Title: Error in search when selecting departure and return with the same month
+
+
+Description: When selecting departure and return with less than 1 year, informing the same month, the displayed message should be "invalid search", or "Unfortunately, this schedule is not possible. Please try again".
+
+
+Severity: High
+
+=================================
+
+Title: Error in the search when informing departure after the return.
+
+
+Description: When selecting the departure after the return, the message displayed should be "invalid search", or "Unfortunately, this schedule is not possible. Please try again", since it is not possible to return before leaving.
+
+
+Severity: High
+
+=================================
+
+Title: The system is accepting invalid format promotional code
+
+
+Description: When informing a promotional code with an invalid format, the system is accepting and applying the discount.
+
+   |XX9-XXX-999|
+
+    X
+Ex: JQ8-EKB-A08
+
+	XX XX
+	347-EWB-BA7
+
+
+Severity: High
+
+
+================================
+
+Title: Error in the search when data is not informed.
+
+
+Description: When the departure and return are not selected, the message displayed should be "invalid search", or "Unfortunately, this schedule is not possible. Please try again"
+, and not the current one that says it has no seats available, as this is not a valid search.
+
+Severity: Medium
+
+=================================
+
+Title: Inconsistency with the location and function of the text: "Book a ticket to the red planet now!"
+
+
+Description: The text "Book a ticket to the red planet now!" it is not a clickable element, and does not redirect to the MarsAir home page and is also not present in the "search results" screen.
+
+
+Severity: High
+
+=================================
+
+
+Title: Alignment of form elements.
+
+
+Description: The elements of the search form are not aligned to the center, as is the UI / UX specification, currently they are aligned to the left.
+
+
+Severity: Low
+
+=================================
+
+
+Title: Tabels are different from the UI / UX specification.
+
+
+Description: The names of the form labels are at odds with the UI / UX specification.
+ In the specification there are: Departure, Arrival and Promo Code. The implementation has: Departing, Returning and Promotional Code.
+
+
+Severity: Low
+
+=================================
+
+
+
+
+JQ8-EKB-A08
+
+
+
+======================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================================
+
+
+
+
+Title: Erro na busca quando selecina partida e retorno com o mesmo mês
+
+
+Description: Ao selecionar partida e retorno com menos de 1 ano, informando o mesmo mês,  mensagem exibida deveria ser de "busca inválida", ou "Unfortunately, this schedule is not possible. Please try again".
+
+
+Severity: High
+
+=================================
+
+Title:  Erro na busca quando informa partida posterior ao retorno.
+
+
+Description: Ao selecionar a partida posterior ao retorno, a mensagem exibida deveria ser de "busca inválida", ou "Unfortunately, this schedule is not possible. Please try again", uma vez que não é possível voltar antes de ter partido.
+
+
+Severity: High
+
+=================================
+
+Title: O sistema está aceitando promocode com formato inválido
+
+
+Description: Ao informar um promocode com o formato inválido, o sistema está aceitando e aplicando o disconto.
+
+   |XX9-XXX-999|
+
+   			X
+Ex: JQ8-EKB-A08
+	
+	XX	    XX
+	347-EWB-BA7
+
+
+Severity: High
+
+=================================
+
+Title: Erro na busca quando não se informa os dados.
+
+
+Description: Quando não se seleciona a partida e o retorno, a mensagem exibida deveria ser de "busca inválida", ou "Unfortunately, this schedule is not possible. Please try again"
+, e não a atual que diz que não tem assentos disponíveis, uma vez que esta não é uma busca válida.
+
+Severity: Medium
+
+=================================
+
+Title: Inconsistência com a localização e função do texto: "Book a ticket to the red planet now!"
+
+
+Description: O texto "Book a ticket to the red planet now!" não é um elemento clicável, e não redireciona para a home page do MarsAir e também não está presente na tela de "search results".
+
+
+Severity: High
+
+=================================
+
+
+Title: Alinhamento dos elementos do formulário.
+
+
+Description: Os elementos do formulário de pesquisa não estão alinhados ao centro, assim como está na especificação de UI/UX, atualmente eles estão alinhados a esquerda.
+
+
+Severity: Low
+
+=================================
+
+
+Title: Tabels estão diferentes da especificação de UI/UX.
+
+
+Description: Os nomes dos labels do formulário estão em desacordo com a especificação de UI/UX.
+ Na especificação tem : Departure, Arrival e Promo Code. A implementação tem: Departing, Returning e Promotional Code.
+
+
+Severity: Low
+
+=================================

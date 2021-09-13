@@ -1,0 +1,143 @@
+Scenario: The user can see the "departure" and "return" fields on the form.
+
+precondition: -
+
+Objective: To validate that the "departure" and "return" fields are present in the search form.
+
+
+Given the user accesses the MarsAir website
+Then the search form presents the standard fields
+
+
+================================================== ===
+
+Scenario: The user can only schedule half-yearly flights for up to 2 years
+
+precondition: -
+
+Objective: To validate that the values ​​of the "departure" and "return" fields show only July and December, with an interval of up to 2 years.
+
+
+Given the user accesses the MarsAir website
+Then the options available will only be July and December until the next 2 years
+
+
+================================================== ===
+Scenario: The user finds available seats
+
+precondition: Have a departure and return interval that has seats available.
+
+Objective: To validate that, when searching for an interval that has seats available, the system returns with the message: “Seats available! Call 0800 MARSAIR to book! ”
+
+
+Given the user accesses the MarsAir website
+When selecting the departure and return that has a seat available
+Then the application should display the message stating availability
+
+
+================================================== ===
+Scenario: User cannot find seats available
+
+precondition: Have a departure and return interval that does not have seats available.
+
+Objective: To validate that, when searching for an interval that does not have available seats, the system returns with the message: “Sorry, there are no more seats available.”
+
+
+Given the user accesses the MarsAir website
+When selecting the departure and return that does not have a seat available
+Then the application should display a friendly message stating unavailability
+
+
+
+
+
+
+================================================== ===
+
+Scenario: The user enters a valid promotional code
+
+precondition:
+    Have a departure and return interval that has seats available.
+    Have a valid promotional code
+
+Objective: To validate that, when searching and entering a valid promotional code, the system displays the message “Promotional code [code] used: [discount]% discount!” and the application of the discount is in accordance with the rules of the first digit.
+
+
+Given the user accesses the MarsAir website
+When selecting the departure, return and inform a valid promotional code
+Then the application will display a message describing the promotional code
+And the application of the discount is in accordance with the promotional code
+
+
+================================================== ===
+Scenario: The user enters an invalid promotional code
+
+precondition:
+	Have a departure and return interval that has seats available.
+    Have an invalid promotional code
+
+Objective: To validate that, when searching and entering an invalid promotional code, the system displays the message “Sorry, code [invalid promo code] is not valid”
+
+
+Given the user accesses the MarsAir website
+When selecting the departure, returning and entering an invalid promotional code
+Then the application will display a message stating that the promotional code is invalid
+
+
+================================================== ===
+Scenario: An accepted promotional code has the valid format
+
+precondition:
+	Have a departure and return interval that has seats available.
+    Have a valid promotional code
+
+Objective: To validate that, when searching for and entering a valid promotional code, it has the format XX9-XXX-999
+
+
+Given the user accesses the MarsAir website
+When selecting the departure, return and inform a valid promotional code
+Then the valid promotional code has the format in the correct pattern
+
+
+================================================== ===
+Scenario: An accepted promotional code has a valid check digit
+
+precondition:
+	Have a departure and return interval that has seats available.
+    Have a valid promotional code
+
+Objective: To validate that, when searching and entering a valid promotional code, it has the correct check digit, being the sum of the previous digits.
+
+
+Given the user accesses the MarsAir website
+When selecting the departure, return and inform a valid promotional code
+Then the valid promotional code has the correct verifier digit
+
+
+================================================== ===
+
+Scenario: The MarsAir logo redirects to the home page
+
+precondition:
+It's on the search results screen
+
+Objective: To validate that when clicking on the MarsAir logo, the user is redirected to the website's home page.
+
+
+Given the user accesses the MarsAir website
+When searching for seats
+And click on the MarsAir logo
+Then the user will be redirected to the home page
+
+================================================== ===
+
+Scenario: The user is unable to search for a trip with a return of less than 1 year
+
+precondition: -
+
+Objective: To validate that it is not possible to search for an interval of departure and return less than 1 year, where the site will display the message: “Unfortunately, this schedule is not possible. Please try again.”
+
+
+Given the user accesses the MarsAir website
+When selecting departure and return less than 1 year apart
+Then the application should display the friendly message stating that the schedule is unavailable
